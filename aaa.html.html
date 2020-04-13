@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> aaa </title>
+</head>
+<body>
+     <div id="main">
+        <table class="aaa" id="table1" width="="450px>
+            <tr><td>AAA</td></tr>
+            <tr><td>AAA</td></tr>
+            <tr><td>AAA</td></tr>
+        </table>
+        <hr id="line">
+        <table width="235px">
+            <tr>
+                <td><button id="above" style="width: 104px" onclick="above()">add row above</button></td>
+                <td><button id="below" style="width: 104px" onclick="below()">add row below</button></td>
+            </tr>
+            <tr>
+                <td><button id="border" style="width: 104px" onclick="border()">add Border</button></td>
+                <td><button id="color" onclick="color()">Change text color</button></td>
+            </tr>
+            <tr>
+                <td><button id="remove" style="width: 104px" onclick="remove()">Remove row </button></td>
+                <td><button id="all" style="width: 104px" onclick="all()">Remove all</button></td>
+            </tr>
+        </table>
+        <script>
+            function above(){
+                var table=document.getElementById("table1");
+                var row=table.insertRow(0);
+                row.innerHTML="BBB";
+            }
+            function below(){
+                var table=document.getElementById("table1");
+                var row=table.insertRow(-1);
+                row.innerHTML="CCC";
+            }
+            function border(){
+                document.getElementById("table1").style.border="solid blue";
+            }
+            function color(){
+                document.getElementById("table1").style.color="pink";                 
+            }
+            function remove(){
+                document.getElementById("table1").deleteRow(-1);               
+            }
+            function all(){
+                $('#table1').remove();
+                }
+        </script>
+     </div>
+</body>
+</html>

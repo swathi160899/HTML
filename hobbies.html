@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> hobbies </title>
+</head>
+<body>
+   <h3 id="main"> My Hobbies</h3>
+   <ol id="list">
+   	<li> Internet</li>
+   	<li> Music</li>
+    </ol>
+    <button id="red" onclick="hobbies()"> Insert more hobbies</button>
+    <script>
+    	function hobbies(){
+    		var hb=prompt("Enter more hobbies");
+    		var list=document.getElementById("list");
+    		var li=document.createElement('li');
+    		li.appendChild(document.createTextNode(hb));
+    		list.appendChild(li);
+    		document.getElementById("main").style.color='red';
+    	}
+    </script>
+</body>
+</html>

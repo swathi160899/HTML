@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test-align center</title>
+	<script type="text/javascript">
+		function domagic(){
+			var plen=document.getElementsByTagName('p');
+			for(var i=0;i<plen.length;i++){
+				document.getElementsByTagName('p')[i].style.textAlign="center";
+				document.getElementsByTagName('p')[i].style.border="dotted red";
+			}
+			}
+			function domiracle(){
+				var plen=document.getElementsByClassName('abc');
+				for(var i=0;i<plen.length;i++){
+					var node=document.createElement("p");
+					var textnode=document.createTextNode("NEW PARA");
+					node.appendChild(textnode);
+				document.getElementsByClassName('abc')[i].innerHTML="NEW HEADING";
+				document.getElementsByClassName('abc')[i].appendChild(node);
+			}
+		
+			}
+</script>
+</head>
+<body>
+	<h2 class="abc">I am level2 heading tag</h2>
+	<p> I am para 1</p>
+	<h1> I am heading1</h1>
+	<p> I am para2</p>
+	<b class="abc">I am bold tag</b><br><br>
+	<input type="button" value="Magic" id="b1" onclick="domagic()"/>
+	<input type="button" value="Miracle" id="b2" onclick="domiracle()"/><br>
+
+</body>
+</html>
